@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+}
+
+body{
+  font-family: Arial;
+  background: #eee;
+  height: 100vh;
+}
+
+.container{
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover{
+  width: 32rem;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: .5rem;
+  font-size: 1.7rem;
+}
+
+h1{
+  font-size: 4rem;
+  text-align: center;
+}
+
+.details{
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  font-weight: bold;
+}
+
+.question-number, .time{
+  background: #005555;
+  padding:  .5rem 1rem;
+  border-radius: .3rem;
+  color:white;
+}
+
+.time{
+  background: #225500;
+}
+
+.question{
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.answers label{
+  background: #005555;
+  color: #fff;
+  width: 100%;
+  padding: 2rem 1rem;
+  margin: 1rem 0;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 400;
+  border: none;
+  border-radius: .5rem;
+  outline: none;
+  display: flex;
+  transition: .5s;
+}
+
+.next{
+  text-align: center;
+}
+
+.next button{
+  padding:1rem 3rem;
+  border: none;
+  margin:1rem 0;
+  border-radius: .3rem;
+  background: #114400;
+  color: #fff;
+  transition: .5s;
+}
+
+.next button:active{
+  background: transparent;
+  border:1px solid #004400;
+  color:#225500;
+}
