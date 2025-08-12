@@ -3,7 +3,7 @@ const timeHTML = document.querySelector('.time');
 const questionNumberHTML = document.querySelector('.question-number');
 const questionHTML = document.querySelector('.question');
 const next = document.querySelector('#next');
-const time = 0.5;
+const time = 1;
 let sec = time * 60;
 const mins = sec / 60;
 console.log(time)
@@ -24,6 +24,33 @@ const questions = [{
     c: 'If else',
     d: 'Array method',
     right: 'd'
+  }
+},{
+  question: 'How do we check if a value is NaN',
+  answers: {
+    a: 'value.check(NaN)',
+    b: 'Number.isNaN()',
+    c: 'isNaN(value)',
+    d: 'value.isNaN()',
+    right: 'c'
+  }
+},{
+  question: 'Which of the following method is use to covert an object to a string',
+  answers:{
+    a: 'JSON.stringify(object)',
+    b: 'obect.toString',
+    c: 'object.from.object.toSteong',
+    d: 'obkect.stringify',
+    right: 'a'
+  }
+},{
+  question: 'What is purpose of typeof in JavaScript',
+  answers: {
+    a: 'To check if a variable is denfined',
+    b: 'To determine the data type of a variable',
+    c: 'To create a new data type',
+    d: 'To covert to anothet data type',
+    right: 'b'
   }
 }]
 
@@ -95,7 +122,8 @@ function submit(){
 
 function timer(){
   let remSec = Math.floor(sec % 60);
-  let remMins = Math.floor(mins % 60);
+  let remMins = Math.floor(mins / 60 % 60);
+  console.log(remMins)
   remSec = remSec < 10 ? `0${remSec}` : remSec;
   remMins = remMins < 10 ? `0${remMins}` : remMins;
   
